@@ -1,0 +1,97 @@
+{
+  "model_name": "Qwen/Qwen2.5-14B-Instruct",
+  "label_space": [
+    "WRITE",
+    "IGNORE",
+    "UPDATE",
+    "MERGE",
+    "FORGET",
+    "QUARANTINE"
+  ],
+  "train_rows": 3477,
+  "val_rows": 1091,
+  "train_config": {
+    "epochs": "1",
+    "lr": "2e-4",
+    "batch": "1",
+    "grad_accum": "16",
+    "lora_r": "16"
+  },
+  "eval": {
+    "n": 1091,
+    "valid_predictions": 1091,
+    "parse_errors": 0,
+    "accuracy_all": 0.9871677360219981,
+    "accuracy_valid_only": 0.9871677360219981,
+    "macro_f1_valid_only": 0.9636416732292759,
+    "mean_latency_sec": 0.10917362130966676,
+    "median_latency_sec": 0.09881186485290527,
+    "classification_report_valid_only": {
+      "WRITE": {
+        "precision": 0.9935135135135135,
+        "recall": 0.9924406047516199,
+        "f1-score": 0.9929767693138843,
+        "support": 926.0
+      },
+      "IGNORE": {
+        "precision": 0.9714285714285714,
+        "recall": 0.8947368421052632,
+        "f1-score": 0.9315068493150684,
+        "support": 38.0
+      },
+      "UPDATE": {
+        "precision": 1.0,
+        "recall": 0.96875,
+        "f1-score": 0.9841269841269841,
+        "support": 32.0
+      },
+      "MERGE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 31.0
+      },
+      "FORGET": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 31.0
+      },
+      "QUARANTINE": {
+        "precision": 0.8157894736842105,
+        "recall": 0.9393939393939394,
+        "f1-score": 0.8732394366197183,
+        "support": 33.0
+      },
+      "accuracy": 0.9871677360219981,
+      "macro avg": {
+        "precision": 0.9634552597710493,
+        "recall": 0.9658868977084705,
+        "f1-score": 0.9636416732292759,
+        "support": 1091.0
+      },
+      "weighted avg": {
+        "precision": 0.987927453583298,
+        "recall": 0.9871677360219981,
+        "f1-score": 0.9873535413007735,
+        "support": 1091.0
+      }
+    },
+    "label_counts_gold": {
+      "WRITE": 926,
+      "IGNORE": 38,
+      "QUARANTINE": 33,
+      "FORGET": 31,
+      "MERGE": 31,
+      "UPDATE": 32
+    },
+    "label_counts_pred": {
+      "WRITE": 925,
+      "QUARANTINE": 38,
+      "FORGET": 31,
+      "MERGE": 31,
+      "IGNORE": 35,
+      "UPDATE": 31
+    }
+  }
+}

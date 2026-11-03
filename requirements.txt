@@ -1,0 +1,16 @@
+numpy
+pandas
+scikit-learn
+joblib
+sentence-transformers
+transformers
+torch
+peft
+accelerate
+datasets
+fastapi
+uvicorn
+streamlit
+requests
+tqdm
+matplotlib
