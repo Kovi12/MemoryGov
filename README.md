@@ -15,6 +15,8 @@ Long-term memory governance for language-model agents: deciding when information
 
 Use Python 3.10+ and install `requirements.txt` in a dedicated environment. Install a CUDA-compatible PyTorch build for GPU experiments; quantized training additionally needs bitsandbytes. Configure model/data paths in the selected script and provide your own model access through environment variables such as `HF_TOKEN`.
 
+The wider classifier/framework comparisons use optional CatBoost, LightGBM, XGBoost and Mem0 adapters; install `requirements-experiments.txt` for those experiments. Backend credentials and model artifacts are configured separately. Optional integrations are not required for the basic SQLite/lexical runtime.
+
 The runtime expects a trained classifier at its configured model path. Generate the required model/data artifacts using the preparation and training scripts before starting the CLI. From this directory, use `python memory_governor_cli_v4_10.py --help` for runtime options. Web and benchmark scripts retain version-specific model/artifact requirements; use the matching runtime stated above.
 
 ## Evaluation
